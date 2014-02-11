@@ -1,0 +1,6 @@
+- track bDay and find average
++ skip 20(avg) when found a name starting with D..P
+- log name starting char to get average class count
++ parallize (shell or threads or however)
++ have minimal operations and more IO
+* Check the possibility of porting it to NODe
