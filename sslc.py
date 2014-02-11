@@ -34,9 +34,11 @@ def getter(x, y):
   ret = 0
   if not errorString in page:
     ret = 1
+    print "Found someone...\n"
     g = open('logs/all.log', 'a')
     g.write(page)
     if nameString in page.lower():
+      print "She's close...\n"
       h = open('logs/pretty.log', 'a')
       h.write(page)
   return ret
