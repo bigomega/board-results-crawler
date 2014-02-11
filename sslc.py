@@ -29,15 +29,15 @@ def getter(x, y):
   timetaken = time() - starttime
   log = str(y)+"."+str(x)+" roll: "+regno+" date: "+str(dob)+" "+("%.2f" % timetaken)+"s"
   print log
-  f = open('dump.log', 'a')
+  f = open('logs/dump.log', 'a')
   f.write(log+"\n")
   ret = 0
   if not errorString in page:
     ret = 1
-    g = open('all.log', 'a')
+    g = open('logs/all.log', 'a')
     g.write(page)
     if nameString in page.lower():
-      h = open('pretty.log', 'a')
+      h = open('logs/pretty.log', 'a')
       h.write(page)
   return ret
 
@@ -56,9 +56,9 @@ for y in range(rollStart, 9000000):
     if success == 1:
       break
   timetakenR = time() - starttimeR
-  f = open('time.log', 'a')
+  f = open('logs/time.log', 'a')
   f.write("time for Roll: "+regno+" - "+("%.2f" % timetakenR)+"s\n")
 
 timetakenW = time() - starttimeW
-g = open('time.log', 'a')
+g = open('logs/time.log', 'a')
 g.write("TOTAL TIME: "+("%.2f" % timetakenW)+"s\n")
