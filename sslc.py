@@ -46,7 +46,7 @@ def getter(x, y):
 
 starttimeW = time()
 for y in range(rollStart, 9000000):
-  regno = str(10000000 + y)
+  regno = str(1000000 + y)
   starttimeR = time()
   start = 0
   if y == rollStart:
